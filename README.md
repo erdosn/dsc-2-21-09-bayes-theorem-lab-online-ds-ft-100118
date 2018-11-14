@@ -156,3 +156,13 @@ You toss a coin to decide which machine to try first; based on this you then put
 red machine. It doesn’t pay out. How should you update your estimate of the probability that this
 is the machine you’re interested in? What if it had paid out - what would be your new estimate
 then
+
+# Problem 5
+In a particular pain clinic, 10% of patients are prescribed narcotic pain killers. Overall, five percent of the clinic’s patients are addicted to narcotics (including pain killers and illegal substances). Out of all the people prescribed pain pills, 8% are addicts. If a patient is an addict, what is the probability that they will be prescribed pain pills?
+
+# Problem 6
+Given the following statistics, what is the probability that a woman has cancer if she has a positive mammogram result?
+
+1. One percent of women over 50 have breast cancer.
+2. Ninety percent of women who have breast cancer test positive on mammograms.
+3. Eight percent of women will have false positives.
