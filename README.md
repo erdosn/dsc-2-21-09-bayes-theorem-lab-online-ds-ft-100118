@@ -7,8 +7,13 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 
 ## Objectives
 * Describe the Bayesian theorem from conditional probabilities
+    * Conditional stuff - looking at the probability based on prior information
 * Describe the roles of Prior, Likehood and Posterior components of Bayes Theorem 
+    * What does the given do? Modifies the probablity space
 * Apply Bayes Theorem to solve probability problems.
+    * We did that thang
+    
+* Easier than other types of probabilities
 
 # Outline
 * Warm Up with Probability work in groups
@@ -151,6 +156,86 @@ a blood test for swine flu, which for the purposes of this exercise we will say 
 to affect 1 in 10,000 people in Australia. The test is 99% accurate, in the sense that the probability
 of a false positive is 1%. The probability of a false negative is zero. You test positive. What is the
 new probability that you have swine flu?
+
+
+```python
+# problem 1
+# P(swine_flue|test positive)
+(1/10000)/((1/10000)*0.99 + (9999/10000) * 0.01)
+```
+
+
+
+
+    0.009902951079421667
+
+
+
+
+```python
+# problem 2
+(1/200)/((1/200)*0.99 + (199/200) * 0.01)
+```
+
+
+
+
+    0.33557046979865773
+
+
+
+
+```python
+# problem 4a
+(0.8*0.5)/(0.90*0.5 + 0.8*0.5)
+```
+
+
+
+
+    0.47058823529411764
+
+
+
+
+```python
+# problem 4b
+(0.2*0.5)/((0.10)*0.5 +(0.20)*0.5)
+```
+
+
+
+
+    0.6666666666666666
+
+
+
+
+```python
+#problem 5
+# P(A|B) = P(B|A) * P(A) / P(B) = 
+(0.08 * 0.1)/0.05
+```
+
+
+
+
+    0.16
+
+
+
+
+```python
+# problem 6
+(0.9 * 0.01) / ((0.9 * 0.01) + (0.08 * 0.99))
+```
+
+
+
+
+    0.10204081632653063
+
+
 
 # Problem 2 Breakout Room 1
 Now imagine that you went to a friend’s wedding in Canada recently, and (for the purposes of this
