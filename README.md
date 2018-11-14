@@ -16,6 +16,8 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 
 ```python
 # Your solution
+p_king = 4/52
+p_king
 ```
 
 
@@ -30,13 +32,12 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 
 ```python
 # Your Solution
+problem = "P(king|facecard)"
+prob = 4/12
+print("{}={}".format(problem, prob))
 ```
 
-
-
-
-    0.3333333333333333
-
+    P(king|facecard)=0.3333333333333333
 
 
 ## Exercise 2
@@ -55,6 +56,9 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 ```python
 # Part 1
 # Your solution
+# P(C|A)
+prob_two_boys_given_oldest = 1/2
+prob_two_boys_given_oldest
 ```
 
 
@@ -68,6 +72,9 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 ```python
 # Part 2 
 # Your solution
+# P(A|C)
+prob_two_boys_given_one = 1/3
+prob_two_boys_given_one
 ```
 
 
@@ -95,7 +102,19 @@ A disease test is advertised as being 99% accurate
 
 
 ```python
-# Your solution
+# By Bayes' Theorem, the probability you have the disease is
+
+#P(D|Pos) = P(Pos|D)* P(D) / P(Pos) 
+
+# P(Pos) is calculated as :
+# You either have the disease and tested incorrectly (0.1*0.99), 
+# or you have the disease and tested correctly (0.99 *0.1). 
+
+
+p_pos = (0.01*0.99) + (0.99 *0.01)
+
+p_d_given_pos = 0.01 * 0.99/p_pos
+p_d_given_pos
 ```
 
 
@@ -108,3 +127,32 @@ A disease test is advertised as being 99% accurate
 ## Summary 
 
 In this lab, we saw a few simple examples of Bayesian logic and how we can add prior information to our calculation, in order to update our beliefs about the certain events. Bayesian logic works in numerous ways and it is not within the scope of this section to give you a deep dive in complex Bayesian problems. You are advised to re-visit the provided links when you have a better understanding of Bayesian inference. 
+
+# Problem 1
+You go to see the doctor about an ingrowing toenail. The doctor selects you at random to have
+a blood test for swine flu, which for the purposes of this exercise we will say is currently suspected
+to affect 1 in 10,000 people in Australia. The test is 99% accurate, in the sense that the probability
+of a false positive is 1%. The probability of a false negative is zero. You test positive. What is the
+new probability that you have swine flu?
+
+# Problem 2
+Now imagine that you went to a friend’s wedding in Canada recently, and (for the purposes of this
+exercise) it is know that 1 in 200 people who visited Canada recently come back with swine flu.
+Given the same test result as above, what should your revised estimate be for the probability you
+have the disease?
+
+# Problem 3
+Imagine that, while in Canada, you also took a side trip to Las Vegas, to pay homage to the
+TV show CSI. Late one night in a bar you meet a guy who claims to know that in the casino at
+the Tropicana there are two sorts of slot machines: one that pays out 10% of the time, and one
+that pays out 20% of the time [note these numbers may not be very realistic]. The two types
+of machines are coloured red and blue. The only problem is, the guy is so drunk he can’t quite
+remember which colour corresponds to which kind of machine. Unfortunately, that night the guy
+becomes the vic in the next CSI episode, so you are unable to ask him again when he’s sober.
+
+# Problem 4
+Next day you go to the Tropicana to find out more. You find a red and a blue machine side by side.
+You toss a coin to decide which machine to try first; based on this you then put the coin into the
+red machine. It doesn’t pay out. How should you update your estimate of the probability that this
+is the machine you’re interested in? What if it had paid out - what would be your new estimate
+then
