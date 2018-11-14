@@ -10,6 +10,14 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 * Describe the roles of Prior, Likehood and Posterior components of Bayes Theorem 
 * Apply Bayes Theorem to solve probability problems.
 
+# Outline
+* Warm Up with Probability work in groups
+* Go over the warm up
+## Go throug the Baye's Theorem Lab (Me talking through the problems)
+## Y'all are will solve problems in groups
+## go over the BT problems
+## Wrap up
+
 ## Exercise 1
 ### If a single card is drawn from a standard deck of playing cards, What is the probability of seeing a king ?
 
