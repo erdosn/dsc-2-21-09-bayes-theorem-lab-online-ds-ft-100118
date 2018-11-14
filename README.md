@@ -24,14 +24,34 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 
 ```python
 # Your solution
+4/52
 ```
+
+
+
+
+    0.07692307692307693
+
+
 
 ### If evidence is provided (for instance, someone looks at the card) that the single card is a **face card**, what would be the posterior probability according to Bayes theorem?
 
 
 ```python
 # Your Solution
+# Given creates/modifies the probability space
+# all 52 cards
+# given = face card -> 12
+# (12/52) -> posterior probablity
+
+print(4/12) # kings/(modified probability space)
+
+print((4/52)/(12/52)) # Baye's Theorem
 ```
+
+    0.3333333333333333
+    0.3333333333333333
+
 
 ## Exercise 2
 #### 1. A couple has two children, the older of which is a boy. What is the probability that they have two boys?
@@ -49,16 +69,37 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 ```python
 # Part 1
 # Your solution
-# P(C|A)
+# P(A|B)
+# GG BG GB BB
+# adding in the given
+# BG BB
+# baye's theorem (p(a)/p(b))
+print(0.5/1.0)
+
+print(1/2)
 
 ```
+
+    0.5
+    0.5
+
 
 
 ```python
 # Part 2 
 # Your solution
 # P(A|C)
+# GG BG GB BB
+# modified by given
+# BG BB GB
+print(1/3) # modified space
+
+print((1/4) / (3/4)) # P(2boys)/P(1boy)
 ```
+
+    0.3333333333333333
+    0.3333333333333333
+
 
 ## Exercise 3 - Bayesian Disease Diagnosis
 
@@ -70,23 +111,35 @@ A disease test is advertised as being 99% accurate
 
 * If a patient has the disease,they  will test positive 99% of the time.
 
-* If you don't have the disease, they will test negative 99% of the time. 
+* If they don't have the disease, they will test negative 99% of the time. 
 
 * 1% of all people have this disease 
 
-#### Now a patient tests positive, what is the probability that you actually have the disease?
+#### Now a patient tests positive, what is the probability that the patient actually has the disease?
 
 
 ```python
 # By Bayes' Theorem, the probability you have the disease is
 
-#P(D|Pos) = P(Pos|D)* P(D) / P(Pos) 
+# P(D|Pos) = P(Pos|D)* P(D) / P(Pos) 
 
 # P(Pos) is calculated as :
-# You either have the disease and tested incorrectly (0.1*0.99), 
-# or you have the disease and tested correctly (0.99 *0.1). 
+# You either have the disease and tested correctly (0.01*0.99), 
+# or you don't have the disease and tested incorrectly (0.99 * 0.01). 
 
+p_pos = (0.01 * 0.99) + (0.99 * 0.01) # 
+p_pos_dis = 0.99
+p_dis = 0.01
+
+p_pos_dis*p_dis / p_pos
 ```
+
+
+
+
+    0.5
+
+
 
 ## Summary 
 
