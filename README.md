@@ -16,29 +16,14 @@ In this lab, we shall try to put some of the formulas to practice that we came a
 
 ```python
 # Your solution
-p_king = 4/52
-p_king
 ```
-
-
-
-
-    0.07692307692307693
-
-
 
 ### If evidence is provided (for instance, someone looks at the card) that the single card is a **face card**, what would be the posterior probability according to Bayes theorem?
 
 
 ```python
 # Your Solution
-problem = "P(king|facecard)"
-prob = 4/12
-print("{}={}".format(problem, prob))
 ```
-
-    P(king|facecard)=0.3333333333333333
-
 
 ## Exercise 2
 #### 1. A couple has two children, the older of which is a boy. What is the probability that they have two boys?
@@ -57,32 +42,15 @@ print("{}={}".format(problem, prob))
 # Part 1
 # Your solution
 # P(C|A)
-prob_two_boys_given_oldest = 1/2
-prob_two_boys_given_oldest
+
 ```
-
-
-
-
-    0.5
-
-
 
 
 ```python
 # Part 2 
 # Your solution
 # P(A|C)
-prob_two_boys_given_one = 1/3
-prob_two_boys_given_one
 ```
-
-
-
-
-    0.3333333333333333
-
-
 
 ## Exercise 3 - Bayesian Disease Diagnosis
 
@@ -110,19 +78,7 @@ A disease test is advertised as being 99% accurate
 # You either have the disease and tested incorrectly (0.1*0.99), 
 # or you have the disease and tested correctly (0.99 *0.1). 
 
-
-p_pos = (0.01*0.99) + (0.99 *0.01)
-
-p_d_given_pos = 0.01 * 0.99/p_pos
-p_d_given_pos
 ```
-
-
-
-
-    0.5
-
-
 
 ## Summary 
 
